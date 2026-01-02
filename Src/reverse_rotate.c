@@ -12,18 +12,6 @@
 
 #include "../Inc/push_swap.h"
 
-/**
- * reverse_rotate - Moves the last element of a stack to the top.
- * 
- * @pile: A double pointer to the stack (linked list) to be modified.
- * 
- * This function performs a reverse rotation on the stack. It takes the last
- * element of the stack, removes it from its current position, and places it
- * at the top of the stack. The stack is represented as a linked list where
- * each node points to the next node.
- * 
- * Return: Always returns 0.
- */
 int	reverse_rotate(t_stack **pile)
 {
 	t_stack	*last;
@@ -45,22 +33,6 @@ int	reverse_rotate(t_stack **pile)
 	return (0);
 }
 
-/**
- * reverse_rotate_a - Performs a reverse rotation on stack 'a'.
- * 
- * @pile: A double pointer to the stack (t_stack) to be reverse rotated.
- * @bonus: An integer flag to determine whether to print the operation.
- *         If bonus is 0, the operation "rra" is printed.
- * 
- * This function checks if the stack is valid and contains at least two
- * elements. If so, it performs a reverse rotation on the stack by calling
- * the reverse_rotate function. If the reverse rotation fails, it returns -1.
- * Otherwise, it prints "rra" if the bonus flag is not set and returns 0.
- * 
- * Return: 
- * - 0 on success.
- * - -1 if the reverse rotation fails.
- */
 int	reverse_rotate_a(t_stack **pile, int bonus)
 {
 	if (!pile || lst_size(pile) < 2)
@@ -72,23 +44,6 @@ int	reverse_rotate_a(t_stack **pile, int bonus)
 	return (0);
 }
 
-/**
- * reverse_rotate_b - Performs a reverse rotation on stack B.
- *
- * @pile: A double pointer to the stack (t_stack) to be reverse rotated.
- * @bonus: An integer flag to determine whether to print the operation.
- *         If bonus is 0, the function prints "rrb\n".
- *
- * Return: 
- *   - 0 on success.
- *   - -1 if the reverse_rotate function fails.
- *   - 0 if the stack is NULL or contains fewer than 2 elements.
- *
- * Description:
- * This function checks if the stack is valid and contains at least two elements.
- * It then calls the reverse_rotate function to perform the reverse rotation.
- * If the bonus flag is not set, it outputs the operation name ("rrb\n").
- */
 int	reverse_rotate_b(t_stack **pile, int bonus)
 {
 	if (!pile || lst_size(pile) < 2)
@@ -100,24 +55,6 @@ int	reverse_rotate_b(t_stack **pile, int bonus)
 	return (0);
 }
 
-/**
- * reverse_rotate_r - Performs a reverse rotation on two stacks and optionally
- *                    prints the operation.
- *
- * @pile_a: A double pointer to the first stack (stack A).
- * @pile_b: A double pointer to the second stack (stack B).
- * @bonus: An integer flag to determine whether to print the operation.
- *         If bonus is 0, the operation "rrr" will be printed.
- *
- * Description:
- * This function performs a reverse rotation on both stack A and stack B
- * if their respective sizes are greater than 1. A reverse rotation moves
- * the last element of the stack to the top. If the bonus flag is set to 0,
- * the function will print "rrr\n" to indicate the operation performed.
- *
- * Return:
- * Always returns 0.
- */
 int	reverse_rotate_r(t_stack **pile_a, t_stack **pile_b, int bonus)
 {
 	if (lst_size(pile_a) > 1)
